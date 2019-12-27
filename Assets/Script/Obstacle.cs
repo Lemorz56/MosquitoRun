@@ -10,6 +10,8 @@ public class Obstacle : MonoBehaviour{
 
     private CamShake shake;
 
+    public GameObject popSound;
+
     private void Start()
     {
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<CamShake>();
@@ -25,9 +27,10 @@ public class Obstacle : MonoBehaviour{
     {
         if (other.CompareTag("Player"))
         {
-            shake.camShake();
-            Debug.Log(shake);
+            //shake.camShake();
+            //Debug.Log(shake);
             Instantiate(effect, transform.position, Quaternion.identity);
+            Instantiate(popSound, transform.position, Quaternion.identity);
 
             // Player takes damage ! 
             other.GetComponent<Player>().health -= damage;

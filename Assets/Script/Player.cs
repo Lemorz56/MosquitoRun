@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 //for death control
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    //void Start()
-    //{  
-    //}
     private Vector2 targetPos;
     public float yIncrement;
 
     public float speed;
     public float maxHeight;
     public float minHeight;
-
     public int health = 3;
+    
     public GameObject effect;
-
     //public Animator camAnim;
+    public Text healthDisplay;
+    public GameObject gameOver;
 
     private CamShake shake;
 
@@ -32,8 +30,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        healthDisplay.text = health.ToString();
+
         if (health <= 0){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameOver.SetActive(true);
+            //gameObject == the game object this component is attached to //this case - player;
+            Destroy(gameObject);
         }
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);

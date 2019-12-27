@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3071352358928936322}
   - component: {fileID: 3071352358928936335}
   - component: {fileID: 3071352358928936320}
+  - component: {fileID: 3743516968880475469}
   m_Layer: 0
   m_Name: Mosquito
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,5 +122,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  speed: 5
+  speed: 7
   effect: {fileID: 5966763891582294169, guid: 252b539bbc2ae57479947c1514b2cb4f, type: 3}
+  popSound: {fileID: 3583165688538633214, guid: 60ed6ce4d77305c4fa1f2244993c69c1,
+    type: 3}
+--- !u!114 &3743516968880475469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3071352358928936323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cff7107627f1f43b8ef007b22dbc86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 10

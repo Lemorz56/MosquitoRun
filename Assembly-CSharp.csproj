@@ -64,8 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CamShake.cs" />
+    <Compile Include="Assets\Script\Destroyer.cs" />
     <Compile Include="Assets\Script\Obstacle.cs" />
     <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\RepeatingBG.cs" />
+    <Compile Include="Assets\Script\Restart.cs" />
+    <Compile Include="Assets\Script\ScoreManager.cs" />
     <Compile Include="Assets\Script\Spawner.cs" />
     <Compile Include="Assets\Script\SpawnPoint.cs" />
     <Reference Include="Unity.Timeline.Editor">
